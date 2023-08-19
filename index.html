@@ -10,11 +10,11 @@
   <script src="assets/js/LanyardPresenceUpdate.js"></script>
   <style>
     .highlighted-text {
-      transition: color 0.2s ease-in-out; /* Add the transition effect */
+      transition: color 0.2s ease-in-out;
     }
   </style>
 </head>
-<body class="dot-pattern-bg"> <!-- Add the dot-pattern-bg class here -->
+<body class="dot-pattern-bg"> 
   <div class="container">
     <div class="content">
       <h2 class="tagline">Hi there!</h2>
@@ -22,6 +22,8 @@
       <p class="description">I focus on back-end programming.</p>
       <div class="links">
         <a href="https://discord.com/users/208876506146013185"><i class="fab fa-discord"></i></a>
+        <span class="separator"></span> 
+        <a href="mailto:admin@choke.dev"><i class="fa-solid fa-envelope"></i></a>
       </div>
       <script>
         function updateTextColor(data) {
@@ -38,7 +40,7 @@
               highlightedText.style.color = '#f23f43';
               break;
             default:
-              highlightedText.style.color = '#80848e'; // Default color for unknown status
+              highlightedText.style.color = '#80848e';
               break;
           }
         }
