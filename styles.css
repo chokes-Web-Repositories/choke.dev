@@ -28,7 +28,7 @@ body.dot-pattern-bg { /* Use the dot-pattern-bg class on the body element */
     margin-bottom: 10px;
   }
   
-  .description {
+  .description {  
     font-size: 1.8em;
     max-width: 500px; /* Limit the width of the description text */
   }
@@ -38,6 +38,11 @@ body.dot-pattern-bg { /* Use the dot-pattern-bg class on the body element */
     background-repeat: repeat;
     background-position: 0 0;
     animation: moveDots 32s linear infinite;
+  }
+
+  .links a {
+    color: inherit; /* Inherit color from the parent element */
+    font-size: 2em;
   }
 
   @keyframes moveDots {
