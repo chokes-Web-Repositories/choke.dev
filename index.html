@@ -6,7 +6,13 @@
   <title>choke</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Figtree&display=swap" rel="stylesheet">
-  <script src="assets/FontAwesomePro.js"></script>
+  <script src="assets/js/FontAwesomePro.js"></script>
+  <script src="assets/js/LanyardPresenceUpdate.js"></script>
+  <style>
+    .highlighted-text {
+      transition: color 0.2s ease-in-out; /* Add the transition effect */
+    }
+  </style>
 </head>
 <body class="dot-pattern-bg"> <!-- Add the dot-pattern-bg class here -->
   <div class="container">
@@ -15,8 +21,34 @@
       <h1 class="title">I'm <span class="highlighted-text">choke</span>.</h1>
       <p class="description">I focus on back-end programming.</p>
       <div class="links">
-        <a href="https://discord.com/users/208876506146013185"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://discord.com/users/208876506146013185"><i class="fab fa-discord"></i></a>
       </div>
+      <script>
+        function updateTextColor(data) {
+          const highlightedText = document.querySelector('.highlighted-text');
+
+          switch (data.discord_status) {
+            case 'online':
+              highlightedText.style.color = '#23a55a';
+              break;
+            case 'idle':
+              highlightedText.style.color = '#f0b232';
+              break;
+            case 'dnd':
+              highlightedText.style.color = '#f23f43';
+              break;
+            default:
+              highlightedText.style.color = '#80848e'; // Default color for unknown status
+              break;
+          }
+        }
+
+        lanyard({
+          userId: "208876506146013185",
+          socket: true,
+          onPresenceUpdate: updateTextColor
+        });
+      </script>
     </div>
   </div>
 </body> 
