@@ -8,27 +8,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Figtree&display=swap" rel="stylesheet">
   <script src="assets/js/FontAwesomePro.js"></script>
   <script src="assets/js/LanyardPresenceUpdate.js"></script>
-  <style>
-    .highlighted-text {
-      transition: color 0.2s ease-in-out;
-    }
-  </style>
 </head>
 <body class="dot-pattern-bg"> 
   <div class="container">
     <div class="content">
+
       <h2 class="tagline">Hi there!</h2>
       <h1 class="title">I'm <span class="highlighted-text">choke</span>.</h1>
       <p class="description">I focus on back-end programming.</p>
+
       <div class="links">
         <a href="https://steamcommunity.com/profiles/76561198168563239"><i class="fa-brands fa-steam"></i></a>
         <span class="separator"></span>
         <a href="https://discord.com/users/208876506146013185"><i class="fab fa-discord"></i></a>
         <span class="separator"></span>
+        <a href="https://roblox.com/user.aspx"><i class="custom-roblox"></i></a>
+        <span class="separator"></span>
         <a href="mailto:admin@choke.dev"><i class="fa-solid fa-envelope"></i></a>
         <span class="separator"></span>
         <a href="https://t.me/ch_oke"><i class="fa-brands fa-telegram"></i></a>
       </div>
+
       <script>
         function updateTextColor(data) {
           const highlightedText = document.querySelector('.highlighted-text');
@@ -55,6 +55,7 @@
           onPresenceUpdate: updateTextColor
         });
       </script>
+
     </div>
   </div>
 </body> 
