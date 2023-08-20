@@ -45,10 +45,16 @@ body.dot-pattern-bg {
     font-size: 2em;
   }
 
-  .separator {
-    margin: 0 5px; 
-    color: #80848e; 
+  .links {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Vertically center the items */
   }
+  
+  .separator {
+    margin: 0 7.5px; /* Add some spacing around the separator */
+    color: #80848e; /* Color of the separator */
+  }
+  
 
   @keyframes moveDots {
     to {
